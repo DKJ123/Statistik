@@ -1,0 +1,506 @@
+JFDML JFormDesigner: "7.0.4.0.360" Java: "11.0.11" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {space :::p, par l {seq {comp buttonBar:::p:979:p, space ::48:x}, seq {comp currentFilePanel:::::x, space :::p, comp currentFilePanel2:::p::p}}}}"
+			"$verticalGroup": "par l {seq t {par l {comp currentFilePanel:::::x, comp currentFilePanel2:::::x}, space :::p, comp buttonBar:::p::p}}"
+		} ) {
+			name: "mainFrame"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class java.awt.GridBagLayout ) {
+				"$columnSpecs": "0:1.0, 80, 80"
+				"$rowSpecs": "0"
+				"$hGap": 5
+				"$vGap": 5
+			} ) {
+				name: "buttonBar"
+				"border": new javax.swing.border.BevelBorder( 0, null, null, sfield java.awt.Color black, sfield java.awt.Color black )
+				"background": new java.awt.Color( 189, 192, 198, 255 )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "okButton"
+					"text": "Confirm"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "okButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 1
+					"gridy": 0
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "cancelButton"
+					"text": "Exit"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "cancelButtonActionPerformed", true ) )
+				}, new FormLayoutConstraints( class com.jformdesigner.runtime.GridBagConstraintsEx ) {
+					"gridx": 2
+					"gridy": 0
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq t {space :::x, par l {seq t {comp filePathField:::p:356:p, space s:::p, comp importFileButton:::p:90:p, space :p:24:p}, seq t {comp generateNewButton:::p:139:p, space :::p}}}, comp currentFileSeparator::t:::x, seq {par l {seq {space :p:31:p, comp currentFileLabel:::p:414:p}, seq l {space :p:22:p, par l {seq l {comp weekLabelPre:::p::p, space :::p, comp weekMenuPre:::p::p, space :p:30:p, comp weekLabelCur:::p::p, space :::p, comp weekMenuCur:::p::p}, seq l {comp dateFromButton:::p::p, space :::p, comp dateFromField:::p:79:p, space :::p, comp dateToButton:::p:56:p, space :::p, comp dateToField:::p:79:p}}}}, space :::x}, comp currentFileScrollPane::t:::x}"
+				"$verticalGroup": "par l {seq l {comp currentFileLabel:::p:33:p, space :::p, comp currentFileScrollPane:::p:441:p, space :::x, par b {comp importFileButton::b:p:36:p, comp filePathField::b:p:36:p}, space u:::p, comp currentFileSeparator:::p::p, space s:::p, par b {comp weekLabelPre::b:p::p, comp weekMenuPre::b:p::p, comp weekLabelCur::b:p::p, comp weekMenuCur::b:p::p}, space :p:39:p, par b {comp dateFromButton::b:p::p, comp dateFromField::b:p::p, comp dateToButton::b:p::p, comp dateToField::b:p::p}, space :p:12:p, comp generateNewButton:::p:42:p, space :::p}}"
+			} ) {
+				name: "currentFilePanel"
+				"background": &Color0 new java.awt.Color( 214, 217, 223, 255 )
+				"border": &MatteBorder0 new javax.swing.border.MatteBorder( 1, 1, 1, 1, sfield java.awt.Color black )
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "currentFileScrollPane"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "currentFileTable"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "RESTAURANG" )
+							add( "V.24" )
+							add( "V.25" )
+							add( "FÖRBÄTTRING" )
+							add( "PROCENT" )
+						}, new java.util.Vector {
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+						}, new java.util.Vector {
+							add( &SwingTableColumn0 new com.jformdesigner.model.SwingTableColumn( null, 150, 50, 300, false ) )
+							add( &SwingTableColumn1 new com.jformdesigner.model.SwingTableColumn( null, 50, 50, 50, false ) )
+							add( &SwingTableColumn2 new com.jformdesigner.model.SwingTableColumn( null, 50, 50, 50, false ) )
+							add( &SwingTableColumn3 new com.jformdesigner.model.SwingTableColumn( null, 100, 100, 100, false ) )
+							add( &SwingTableColumn4 new com.jformdesigner.model.SwingTableColumn( null, 70, 70, 70, false ) )
+						} )
+						"showVerticalLines": true
+						"showHorizontalLines": true
+						"border": &LineBorder0 new javax.swing.border.LineBorder( sfield java.awt.Color black, 1, true )
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "currentFileLabel"
+					"horizontalAlignment": 0
+					"font": &SwingDerivedFont0 new com.jformdesigner.model.SwingDerivedFont( null, 0, 6, false )
+					"text": "View of current file"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "importFileButton"
+					"text": "Import file"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "importFileButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "currentFileSeparator"
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "filePathField"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "generateNewButton"
+					"text": "Generate new file"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "generateNewButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "weekLabelPre"
+					"text": "Select new previous week:"
+					"font": &SwingDerivedFont1 new com.jformdesigner.model.SwingDerivedFont( null, 0, 1, false )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "weekLabelCur"
+					"text": "Select new current week:"
+					"font": #SwingDerivedFont1
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "weekMenuPre"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "Week"
+						addElement( "Week" )
+						addElement( "V.1" )
+						addElement( "V.2" )
+						addElement( "V.3" )
+						addElement( "V.4" )
+						addElement( "V.5" )
+						addElement( "V.6" )
+						addElement( "V.7" )
+						addElement( "V.8" )
+						addElement( "V.9" )
+						addElement( "V.10" )
+						addElement( "V.11" )
+						addElement( "V.12" )
+						addElement( "V.13" )
+						addElement( "V.14" )
+						addElement( "V.15" )
+						addElement( "V.16" )
+						addElement( "V.17" )
+						addElement( "V.18" )
+						addElement( "V.19" )
+						addElement( "V.20" )
+						addElement( "V.21" )
+						addElement( "V.22" )
+						addElement( "V.23" )
+						addElement( "V.24" )
+						addElement( "V.25" )
+						addElement( "V.26" )
+						addElement( "V.27" )
+						addElement( "V.28" )
+						addElement( "V.29" )
+						addElement( "V.30" )
+						addElement( "V.31" )
+						addElement( "V.32" )
+						addElement( "V.33" )
+						addElement( "V.34" )
+						addElement( "V.35" )
+						addElement( "V.36" )
+						addElement( "V.37" )
+						addElement( "V.38" )
+						addElement( "V.39" )
+						addElement( "V.40" )
+						addElement( "V.41" )
+						addElement( "V.42" )
+						addElement( "V.43" )
+						addElement( "V.44" )
+						addElement( "V.45" )
+						addElement( "V.46" )
+						addElement( "V.47" )
+						addElement( "V.48" )
+						addElement( "V.49" )
+						addElement( "V.50" )
+						addElement( "V.51" )
+						addElement( "V.52" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JComboBox" ) {
+					name: "weekMenuCur"
+					"model": new javax.swing.DefaultComboBoxModel {
+						selectedItem: "Week"
+						addElement( "Week" )
+						addElement( "V.1" )
+						addElement( "V.2" )
+						addElement( "V.3" )
+						addElement( "V.4" )
+						addElement( "V.5" )
+						addElement( "V.6" )
+						addElement( "V.7" )
+						addElement( "V.8" )
+						addElement( "V.9" )
+						addElement( "V.10" )
+						addElement( "V.11" )
+						addElement( "V.12" )
+						addElement( "V.13" )
+						addElement( "V.14" )
+						addElement( "V.15" )
+						addElement( "V.16" )
+						addElement( "V.17" )
+						addElement( "V.18" )
+						addElement( "V.19" )
+						addElement( "V.20" )
+						addElement( "V.21" )
+						addElement( "V.22" )
+						addElement( "V.23" )
+						addElement( "V.24" )
+						addElement( "V.25" )
+						addElement( "V.26" )
+						addElement( "V.27" )
+						addElement( "V.28" )
+						addElement( "V.29" )
+						addElement( "V.30" )
+						addElement( "V.31" )
+						addElement( "V.32" )
+						addElement( "V.33" )
+						addElement( "V.34" )
+						addElement( "V.35" )
+						addElement( "V.36" )
+						addElement( "V.37" )
+						addElement( "V.38" )
+						addElement( "V.39" )
+						addElement( "V.40" )
+						addElement( "V.41" )
+						addElement( "V.42" )
+						addElement( "V.43" )
+						addElement( "V.44" )
+						addElement( "V.45" )
+						addElement( "V.46" )
+						addElement( "V.47" )
+						addElement( "V.48" )
+						addElement( "V.49" )
+						addElement( "V.50" )
+						addElement( "V.51" )
+						addElement( "V.52" )
+					}
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "dateFromButton"
+					"text": "From:"
+					"inheritsPopupMenu": true
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "dateFromButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "dateFromField"
+					"text": "2021-06-12"
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "dateToButton"
+					"text": "To:"
+					"inheritsPopupMenu": true
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "dateToButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JTextField" ) {
+					name: "dateToField"
+					"text": "2021-06-18"
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {comp currentFileSeparator2::t:::x, comp currentFileScrollPane2::t:::x, seq {space :p:31:p, comp currentFileLabel2:::p:414:p, space :::x}}"
+				"$verticalGroup": "par l {seq l {comp currentFileLabel2:::p:33:p, space :::p, comp currentFileScrollPane2:::p:441:p, space :::x, comp currentFileSeparator2:::p::p, space :p:165:p}}"
+			} ) {
+				name: "currentFilePanel2"
+				"background": #Color0
+				"border": #MatteBorder0
+				add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+					name: "currentFileScrollPane2"
+					add( new FormComponent( "javax.swing.JTable" ) {
+						name: "currentFileTable2"
+						"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector, new java.util.Vector {
+							add( "RESTAURANG" )
+							add( "V.25" )
+							add( "V.26" )
+							add( "FÖRBÄTTRING" )
+							add( "PROCENT" )
+						}, new java.util.Vector {
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+							add( class java.lang.String )
+						}, new java.util.Vector {
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+							add( false )
+						}, new java.util.Vector {
+							add( #SwingTableColumn0 )
+							add( #SwingTableColumn1 )
+							add( #SwingTableColumn2 )
+							add( #SwingTableColumn3 )
+							add( #SwingTableColumn4 )
+						} )
+						"showVerticalLines": true
+						"showHorizontalLines": true
+						"border": #LineBorder0
+					} )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "currentFileLabel2"
+					"horizontalAlignment": 0
+					"font": #SwingDerivedFont0
+					"text": "Preview of new file"
+				} )
+				add( new FormComponent( "javax.swing.JSeparator" ) {
+					name: "currentFileSeparator2"
+				} )
+			} )
+			menuBar: new FormContainer( "javax.swing.JMenuBar", new FormLayoutManager( class javax.swing.JMenuBar ) ) {
+				name: "menuBar"
+				"background": sfield java.awt.Color lightGray
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "fileMenuBar"
+					"text": "File"
+				} )
+				add( new FormContainer( "javax.swing.JMenu", new FormLayoutManager( class javax.swing.JMenu ) ) {
+					name: "helpMenuBar"
+					"text": "Help"
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "helpImportFiles"
+						"text": "Import files"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "helpNewFile"
+						"text": "New file"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "helpAbout"
+						"text": "About"
+					} )
+					add( new FormComponent( "javax.swing.JMenuItem" ) {
+						name: "helpEmailSup"
+						"text": "Email support"
+					} )
+				} )
+			}
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 1305, 0 )
+			"size": new java.awt.Dimension( 1035, 805 )
+		} )
+		add( new FormWindow( "javax.swing.JDialog", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {seq {par l {seq {space :p:21:p, comp warningMessage:::p:252:p}, seq l {space :p:72:p, comp warningOkButton:::p:72:p, space :::p, comp warningCancelButton:::p::p}}, space ::35:x}}"
+			"$verticalGroup": "par l {seq l {space :p:15:p, comp warningMessage:::p:60:p, space :::p, par b {comp warningCancelButton::b:p:36:p, comp warningOkButton::b:p:36:p}, space ::11:x}}"
+		} ) {
+			name: "warningDialog"
+			"title": "WARNING"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "warningMessage"
+				"text": "SOME KIND OF WARNING IF NECESSARY"
+				"horizontalAlignment": 0
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "warningOkButton"
+				"text": "OK"
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "warningCancelButton"
+				"text": "CANCEL"
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 265, 340 )
+			"size": new java.awt.Dimension( 310, 160 )
+		} )
+		add( new FormWindow( "javax.swing.JWindow", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+			"$horizontalGroup": "par l {comp dateHeader:::::x, comp dateSelectScrollPane::::310:x, seq t {space ::243:x, comp yearDropDownMenu:::p::p, space :::p}}"
+			"$verticalGroup": "par l {seq l {comp dateHeader:::p:36:p, space :::p, comp dateSelectScrollPane:::p:136:p, space :::p, comp yearDropDownMenu:::p::p, space :0:5:x}}"
+		} ) {
+			name: "window1"
+			add( new FormContainer( "javax.swing.JPanel", new FormLayoutManager( class org.jdesktop.layout.GroupLayout ) {
+				"$horizontalGroup": "par l {seq l {space :::p, comp prevMonthButton:::p::p, space ::75:x, comp monthLabel:::p:72:p, space :p:41:p, comp nextMonthButton:::p::p, space :::p}}"
+				"$verticalGroup": "par l {seq {par l {par b:l {comp nextMonthButton::b:p::p, comp monthLabel::b:p::p}, comp prevMonthButton::l:p::p}, space :::x}}"
+			} ) {
+				name: "dateHeader"
+				"background": new java.awt.Color( 158, 173, 191, 255 )
+				"border": new javax.swing.border.SoftBevelBorder( 0, null, null, null, null )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "prevMonthButton"
+					"text": "Prev"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "prevMonthButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "nextMonthButton"
+					"text": "Next"
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "nextMonthButtonActionPerformed", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JLabel" ) {
+					name: "monthLabel"
+					"text": "January"
+					"font": new com.jformdesigner.model.SwingDerivedFont( null, 0, 4, false )
+				} )
+			} )
+			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
+				name: "dateSelectScrollPane"
+				add( new FormComponent( "javax.swing.JTable" ) {
+					name: "dateDayTable"
+					"model": new com.jformdesigner.model.SwingTableModel( new java.util.Vector {
+						add( new java.util.Vector {
+							add( 1 )
+							add( 2 )
+							add( 3 )
+							add( 4 )
+							add( 5 )
+							add( 6 )
+						} )
+						add( new java.util.Vector {
+							add( 7 )
+							add( 8 )
+							add( 9 )
+							add( 10 )
+							add( 11 )
+							add( 12 )
+						} )
+						add( new java.util.Vector {
+							add( 13 )
+							add( 14 )
+							add( 15 )
+							add( 16 )
+							add( 17 )
+							add( 18 )
+						} )
+						add( new java.util.Vector {
+							add( 19 )
+							add( 20 )
+							add( 21 )
+							add( 22 )
+							add( 23 )
+							add( 24 )
+						} )
+						add( new java.util.Vector {
+							add( 25 )
+							add( 26 )
+							add( 27 )
+							add( 28 )
+							add( 29 )
+							add( 30 )
+						} )
+						add( new java.util.Vector {
+							add( 31 )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+							add( null )
+						} )
+					}, new java.util.Vector {
+						add( " " )
+						add( " " )
+						add( " " )
+						add( " " )
+						add( " " )
+						add( " " )
+					}, new java.util.Vector {
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+						add( class java.lang.Integer )
+					}, new java.util.Vector {
+						add( false )
+						add( false )
+						add( false )
+						add( false )
+						add( false )
+						add( false )
+					}, new java.util.Vector {
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+						add( new com.jformdesigner.model.SwingTableColumn( null, 0, 0, 0, false ) )
+					} )
+					"showVerticalLines": true
+					"showHorizontalLines": true
+					"autoscrolls": false
+					addEvent( new FormEvent( "java.awt.event.MouseListener", "mouseClicked", "dateDayTableMouseClicked", true ) )
+				} )
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "yearDropDownMenu"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Year"
+					addElement( "Year" )
+					addElement( "2021" )
+					addElement( "2020" )
+					addElement( "2019" )
+					addElement( "2018" )
+					addElement( "2017" )
+					addElement( "2016" )
+					addElement( "2015" )
+					addElement( "2014" )
+					addElement( "2013" )
+					addElement( "2012" )
+					addElement( "2011" )
+					addElement( "2010" )
+					addElement( "2009" )
+					addElement( "2008" )
+					addElement( "2007" )
+					addElement( "2006" )
+					addElement( "2005" )
+					addElement( "2004" )
+					addElement( "2003" )
+					addElement( "2002" )
+					addElement( "2001" )
+					addElement( "2000" )
+				}
+				"selectedIndex": 1
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 260, 90 )
+			"size": new java.awt.Dimension( 310, 215 )
+		} )
+	}
+}
